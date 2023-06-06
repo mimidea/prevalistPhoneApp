@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/map"
+    android:orientation="vertical"
+    android:layout_margin="20dp"
+    tools:context=".fragments.MapFragment">
+
+    <EditText
+        android:id="@+id/TF_location"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:ems="40"
+        android:hint="EnterAddress"
+        android:inputType="textPersonName" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:id="@+id/search"
+        android:text="Search"
+        android:layout_marginVertical="@android:dimen/app_icon_size"/>
+
+
+    <fragment
+        android:id="@+id/fragment_map_"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="750dp"
+        android:layout_gravity="bottom" />
+
+</FrameLayout>
