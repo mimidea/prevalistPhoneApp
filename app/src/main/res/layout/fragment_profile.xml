@@ -1,0 +1,83 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/laprofil">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="16dp">
+
+        <ImageView
+            android:id="@+id/profile_picture"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/pozadeprofil"
+            android:layout_alignParentEnd="true"
+            android:layout_marginBottom="16dp"/>
+
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profile_picture"
+           android:background="@color/white"/>
+
+        <Button
+            android:id="@+id/saved_page_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Saved Page"
+            android:layout_below="@id/calendarView"
+            android:layout_marginBottom="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/itineraryTextView"
+            android:layout_below="@+id/saved_page_button"
+            android:text="Itinerary"
+            />
+
+        <EditText
+            android:id="@+id/itineraryEditText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/itineraryTextView"
+            android:layout_marginBottom="30dp"
+            android:hint="Enter your itinerary"
+            android:minHeight="48dp"
+            android:background="@color/white"/>
+
+        <Button
+            android:id="@+id/saveItineraryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Save"
+            android:layout_below="@+id/itineraryEditText" />
+
+        <Button
+            android:id="@+id/viewItineraryButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="View Itinerary"
+            android:layout_below="@+id/saveItineraryButton" />
+
+        <Button
+            android:id="@+id/frineds"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Frineds"
+            android:layout_below="@+id/viewItineraryButton" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/itineraryRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/frineds"
+            android:layout_marginTop="16dp"
+            android:background="@color/white"/>
+
+    </RelativeLayout>
+</ScrollView>
